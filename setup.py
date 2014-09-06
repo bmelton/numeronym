@@ -26,6 +26,4 @@ setup(
     license="BSD",
     classifiers=classifiers,
     packages=["numeronym"],
-    # test_suite='shortuuid.tests',
-    # tests_require=['pep8'],
 )
