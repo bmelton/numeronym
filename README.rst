@@ -11,14 +11,14 @@ module that I could reuse.
 INSTALLATION
 ============
 
-    pip install numeronym
+    >>> pip install numeronym
 
 USAGE
 =====
 
-    from numeronym import numeronym
-    numeronym("Andreesen Horowitz")
-    > 'a16z'
+    >>> from numeronym import numeronym
+    >>> numeronym("Andreesen Horowitz")
+    >>> 'a16z'
 
 NOTE
 ====
