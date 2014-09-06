@@ -8,6 +8,18 @@ It's like, 2 lines of code, so I don't know why you'd need it,
 but I was using it enough that I figured I'd make it a 
 module that I could reuse. 
 
+INSTALLATION
+============
+
+    pip install numeronym
+
+USAGE
+=====
+
+    from numeronym import numeronym
+    numeronym("Andreesen Horowitz")
+    > 'a16z'
+
 NOTE
 ====
 
