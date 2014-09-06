@@ -21,8 +21,8 @@ setup(
     author="Barry Melton",
     author_email="barry.melton@gmail.com.com",
     url="https://github.com/bmelton/numeronym/",
-    description="A simple library for generating numeronyms "
-    long_description="A simple library for generates numeronyms."
+    description="A simple library for generating numeronyms",
+    long_description="A simple library for generates numeronyms.",
     license="BSD",
     classifiers=classifiers,
     packages=["numeronym"],
