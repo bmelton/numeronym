@@ -12,11 +12,8 @@ class Numeronym:
         if lower:
             self.return_lower   = lower
         
-        print self.allow_short
-        print self.return_lower
         
     def encode(self, input):
-        print "Lower: %s" % (self.return_lower)
         if len(input) < 4:
             if self.allow_short == True:
                 f = input[0]

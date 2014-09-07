@@ -17,7 +17,7 @@ classifiers = [
 
 setup(
     name="numeronym",
-    version="1.0.3",
+    version="1.0.4",
     author="Barry Melton",
     author_email="barry.melton@gmail.com.com",
     url="https://github.com/bmelton/numeronym/",
