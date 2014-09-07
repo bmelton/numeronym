@@ -1,4 +1,5 @@
 *.pyc 
+numeronym/*.pyc
 *.swp
 *.swo
 dist/
