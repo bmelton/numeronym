@@ -1,2 +1,3 @@
 1.0.0, Sep 06 2014  -- Initial release.
 1.0.1, Sep 06 2014  -- Updated documentation.
+1.0.2, Sep 06 2014  -- Raise exception on short strings.

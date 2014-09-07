@@ -16,9 +16,49 @@ INSTALLATION
 USAGE
 =====
 
-    >>> from numeronym import numeronym
-    >>> numeronym("Andreesen Horowitz")
+    >>> from numeronym import Numeronym
+    >>> output = Numeronym()
+    >>> result = output.encode("Andreesen Horowitz")
     >>> 'a16z'
+
+The Numeronym class has two Boolean options.  'short' and 
+'lower'.
+
+Pass in short=True to allow short inputs (like "hi").  Default
+is False, as creating a numeronym for something like "hi" is 
+kind of silly, but if you want it to do that, or don't want to 
+have to deal with catching the exception for short values, then
+feel free to enable it. 
+
+Example
+
+    >>> from numeronym import Numeronym
+
+    >>> output = Numeronym(short=True)
+    >>> result = output.encode("Hi")
+    
+    # Default
+    >>> Traceback (most recent call last):
+    >>>  File "<stdin>", line 1, in <module>
+    >>>  File "numeronym/main.py", line 29, in encode
+    >>>    raise Exception("Input string must be at least four characters in length")
+    >>> Exception: Input string must be at least four characters in length
+
+    # Short=True
+    >>> output = Numeronym(short=True)
+    >>> result = output.encode("Hi")
+    >>> 'h1' 
+
+The other option is lower, which will return output in lower 
+case by default.  If you wish to preserve the case of the input, 
+simply pass lower=False. 
+
+Example
+
+    >>> from numeronym import Numeronym
+    >>> output = Numeronym(lower=False)
+    >>> result = output.encode("Andreesen Horowitz")
+    >>> 'A16z' # Note the upper case 'A' 
 
 NOTE
 ====

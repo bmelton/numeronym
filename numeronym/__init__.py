@@ -1,3 +1,3 @@
 from numeronym.main import (
-    numeronym,
+    Numeronym,
 )
