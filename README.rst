@@ -37,14 +37,12 @@ Example
     >>> output = Numeronym(short=True)
     >>> result = output.encode("Hi")
     
-    # Default
     >>> Traceback (most recent call last):
     >>>  File "<stdin>", line 1, in <module>
     >>>  File "numeronym/main.py", line 29, in encode
     >>>    raise Exception("Input string must be at least four characters in length")
     >>> Exception: Input string must be at least four characters in length
 
-    # Short=True
     >>> output = Numeronym(short=True)
     >>> result = output.encode("Hi")
     >>> 'h1' 
