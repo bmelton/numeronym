@@ -3,3 +3,4 @@
 1.0.2, Sep 06 2014  -- Raise exception on short strings.
 1.0.3, Sep 07 2014  -- Optionally allow short strings, optionally preserve case
 1.0.4, Sep 07 2014  -- Removed extraneous debug messages
+1.0.5, Sep 08 2014  -- Modified 'lower' to 'preserve_case', updated docs.  Added tests.

@@ -22,7 +22,7 @@ USAGE
     >>> 'a16z'
 
 The Numeronym class has two Boolean options.  'short' and 
-'lower'.
+'preserve_case'.
 
 Pass in short=True to allow short inputs (like "hi").  Default
 is False, as creating a numeronym for something like "hi" is 
@@ -47,14 +47,14 @@ Example
     >>> result = output.encode("Hi")
     >>> 'h1' 
 
-The other option is lower, which will return output in lower 
+The other option is 'preserve_case', which will return output in lower 
 case by default.  If you wish to preserve the case of the input, 
-simply pass lower=False. 
+simply pass preserve_case=True. 
 
 Example
 
     >>> from numeronym import Numeronym
-    >>> output = Numeronym(lower=False)
+    >>> output = Numeronym(preserve_case=True)
     >>> result = output.encode("Andreesen Horowitz")
     >>> 'A16z' # Note the upper case 'A' 
 

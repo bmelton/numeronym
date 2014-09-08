@@ -1,16 +1,13 @@
 class Numeronym:
-    def __init__(self, short=None, lower=None):
+    def __init__(self, short=None, preserve_case=None):
         # Default variables
-        allow_short             = False
-        return_lower            = True
-        
-        self.allow_short        = allow_short
+        self.allow_short        = False
         if short:
             self.allow_short    = short
         
-        self.return_lower       = return_lower
-        if lower:
-            self.return_lower   = lower
+        self.preserve_case      = False
+        if preserve_case is not None:
+            self.preserve_case  = preserve_case
         
         
     def encode(self, input):
@@ -18,19 +15,20 @@ class Numeronym:
             if self.allow_short == True:
                 f = input[0]
                 output = "%s%d" % (f, len(input[1:]))
-                if self.return_lower == True:
+
+                if self.preserve_case == False:
                     output = output.lower()
 
                 return output
             else:
                 raise Exception("Input string must be at least four characters in length")
+        else:
+            f = input[0]
+            l = input[-1]
 
-        f = input[0]
-        l = input[-1]
+            output = "%s%d%s" % (f, len(input[1:-1]), l)
 
-        output = "%s%d%s" % (f, len(input[1:-1]), l)
+            if self.preserve_case == False:
+                output = output.lower()
 
-        if self.return_lower == True:
-            output = output.lower()
-
-        return output
+            return output
